@@ -1,0 +1,54 @@
+﻿<Window x:Class="CalendarApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CalendarApp"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="400" Width="500">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Row="1" Grid.Column="0" Margin="20">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="10*"/>
+                    <RowDefinition Height="40*"/>
+                    <RowDefinition Height="15*"/>
+                </Grid.RowDefinitions>
+                <Viewbox Width ="140px" Grid.Row ="1" Grid.Column="0" 
+                         HorizontalAlignment="Center" VerticalAlignment="Top" >
+                    <DatePicker 
+                        x:Name="MainPicker" FirstDayOfWeek="Monday"
+                        SelectedDateChanged="OnCalendarChange">
+                    </DatePicker>
+                </Viewbox>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1" Grid.Column="2" Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+                <RowDefinition Height="20*"/>
+            </Grid.RowDefinitions>
+            <TextBlock Grid.Row ="0" Grid.Column="0" Name="TextBlockAge" Foreground="AliceBlue"
+                       TextWrapping="Wrap" Background="BlueViolet" 
+                       TextAlignment="Center" FontSize="18" Margin="10">
+                Your age
+            </TextBlock>
+            <TextBlock Grid.Row ="1" Grid.Column="0" Name="TextBlockWestZodiac" Foreground="AliceBlue" 
+                       TextWrapping="Wrap" Background="BlueViolet" 
+                       TextAlignment="Center" FontSize="18" Margin="10">
+                Western zodiac
+            </TextBlock>
+            <TextBlock Grid.Row ="2" Grid.Column="0" Name="TextBlockChiniseZodiac" Foreground="AliceBlue"
+                       TextWrapping="Wrap" Background="BlueViolet" 
+                       TextAlignment="Center" FontSize="18" Margin="10">
+                Chinise zodiac
+            </TextBlock>
+        </Grid>
+    </Grid>
+</Window>
